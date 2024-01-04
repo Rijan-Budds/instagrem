@@ -24,6 +24,8 @@ defmodule InstagramWeb.Router do
     get "/friends", InstagramController, :friends
     get "/photos", InstagramController, :photos
     get "/likes", InstagramController, :likes
+    get "/new", FriendController, :new
+    get "/new", FriendController, :create
   end
 
   # Other scopes may use custom stacks.

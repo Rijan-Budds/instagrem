@@ -1,11 +1,11 @@
-defmodule Instagram.Repo.Migrations.CreateUsers do
+defmodule Instagram.Repo.Migrations.AddUserTable do
   use Ecto.Migration
 
   def change do
     create table(:users) do
       add :name, :string
-      add :age, :integer
       add :email, :string
+      add :date_of_birth, :utc_datetime
     end
   end
 end

@@ -4,16 +4,14 @@ defmodule Instagram.User do
 
   schema "users" do
     field :name, :string
-    field :age, :integer
     field :email, :string
-
-    timestamps(type: :utc_datetime)
+    field :date_of_birth, :utc_datetime
   end
 
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :age, :email])
-    |> validate_required([:name, :age, :email])
+    |> cast(attrs, [:name, :email, :date_of_birth])
+    |> validate_required([:name, :email, :date_of_birth])
   end
 end
