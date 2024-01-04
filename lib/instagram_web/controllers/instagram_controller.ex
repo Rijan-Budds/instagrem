@@ -2,7 +2,7 @@ defmodule InstagramWeb.InstagramController do
   use InstagramWeb, :controller
 
   def friends(conn, _params) do
-    render(conn, "instagram.html")
+    render(conn, "friends.html", layout: false)
   end
 
   def photos(conn, _params) do
